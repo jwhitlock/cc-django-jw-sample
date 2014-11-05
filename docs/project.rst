@@ -16,7 +16,7 @@ a process like this:
     app_name (default is "boilerplate")? sample
     site_name (default is "bpsite")? sample_site
     project_short_description (default is "Python Boilerplate contains all the boilerplate you need to create a Python package.")? Sample Project created from cookiecutter-django-jw
-    release_date (default is "2015-01-11")? 2014-11-04
+    release_date (default is "2015-01-11")? 2014-11-05
     year (default is "2014")? 2014
     version (default is "0.1.0")? 0.1.0
     $ cd cc-django-jw-sample
@@ -70,7 +70,7 @@ to match your desired configuration.
 
 In development, some ways to set the environment are:
 
-* On the command line: ``DEBUG-1 ./manage.py runserver``
+* On the command line: ``DEBUG=1 ./manage.py runserver``
 * Export settings: ``export DEBUG=1; ./manage.py runserver``
 * As part of virtualenv initialization: ``vim $VIRTUAL_ENV/bin/postactivate``
   for the ``export DEBUG=1`` set statements, and
@@ -84,34 +84,24 @@ button, or manually:
 .. code-block:: sh
 
     $ heroku apps:create cc-django-jw-sample
+
+Then config for development:
+
+.. code-block:: sh
+
+    $ heroku config:set EXTRA_INSTALLED_APPS=gunicorn STATIC_ROOT=static DEBUG=1
+
+Or for production:
+
+.. code-block:: sh
+
+    $ heroku config:set EXTRA_INSTALLED_APPS=gunicorn STATIC_ROOT=static DEBUG=0 ALLOWED_HOSTS=cc-django-jw-sample.herokuapp.com SECURE_PROXY_SSL_HEADER=HTTP_X_FORWARDED_PROTOCOL,https
+
+When you've got the app configured, deploy your code to run it:
+
+.. code-block:: sh
+
     $ git push heroku master
-
-The minimum config for running in heroku is:
-
-.. code-block:: sh
-
-    $ heroku config:set EXTRA_INSTALLED_APPS=gunicorn STATIC_ROOT=static
-
-
-For development, you'll want to enable debug:
-
-.. code-block:: sh
-
-    $ heroku config:set DEBUG=1
-
-For release, more is useful:
-
-.. code-block:: sh
-
-    $ heroku config:set DEBUG=0
-    $ heroku config:set EXTRA_INSTALLED_APPS=gunicorn
-    $ heroku config:set ALLOWED_HOSTS=cc-django-jw-sample.herokuapp.com
-    $ heroku config:set SECURE_PROXY_SSL_HEADER=HTTP_X_FORWARDED_PROTOCOL,https
-
-When you've got the app configured, you can open it in the browser with:
-
-.. code-block:: sh
-
     $ heroku open
 
 .. _12factor: http://12factor.net

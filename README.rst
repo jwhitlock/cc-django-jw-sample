@@ -2,35 +2,32 @@
 Sample Project
 ==============
 
-.. Include badges, while avoiding Sphinx "External image" warnings
+.. This causes warnings from Sphinx due to external images, but the GitHub parser ignores raw HTML
 
-.. raw:: html
+.. image:: https://travis-ci.org/jwhitlock/cc-django-jw-sample.png?branch=master
+    :height: 22px
+    :alt: The status of Travis continuous integration tests
+    :target: https://travis-ci.org/jwhitlock/cc-django-jw-sample
 
-    <p style="height:22px">
-      <a href="https://travis-ci.org/jwhitlock/cc-django-jw-sample">
-        <img src="https://travis-ci.org/jwhitlock/cc-django-jw-sample.png?branch=master"
-             alt="The status of Travis continuous integration tests">
-      </a>
-      <a href="https://coveralls.io/r/jwhitlock/cc-django-jw-sample?branch=master">
-        <img src="https://coveralls.io/repos/jwhitlock/cc-django-jw-sample/badge.png?branch=master"
-             alt="The code coverage">
-      </a>
-      <a href="http://badge.fury.io/py/cc-django-jw-sample">
-        <img src="https://badge.fury.io/py/cc-django-jw-sample.png"
-             alt="The PyPI package">
-      </a>
-      <a href="https://pypi.python.org/pypi/cc-django-jw-sample">
-        <img src="https://pypip.in/d/cc-django-jw-sample/badge.png"
-             alt="PyPI download statistics">
-      </a>
-    </p>
-    <p style="height:35px">
-      <a href="https://heroku.com/deploy?template=https://github.com/jwhitlock/cc-django-jw-sample">
-        <img src="https://www.herokucdn.com/deploy/button.png"
-             alt="Deploy to Heroku">
-      </a>
-    </p>
+.. image:: https://coveralls.io/repos/jwhitlock/cc-django-jw-sample/badge.png?branch=master
+    :height: 22px
+    :alt: The code coverage
+    :target: https://coveralls.io/r/jwhitlock/cc-django-jw-sample?branch=master
 
+.. image:: https://badge.fury.io/py/cc-django-jw-sample.png
+    :height: 22px
+    :alt: The PyPI package
+    :target: http://badge.fury.io/py/cc-django-jw-sample
+
+.. image:: https://pypip.in/d/cc-django-jw-sample/badge.png
+    :height: 22px
+    :alt: PyPI download statistics
+    :target: https://pypi.python.org/pypi/cc-django-jw-sample
+
+.. image:: https://www.herokucdn.com/deploy/button.png
+    :height: 35px
+    :alt: Deploy to Heroku
+    :target: https://heroku.com/deploy?template=https://github.com/jwhitlock/cc-django-jw-sample
 
 Sample Project created from cookiecutter-django-jw
 

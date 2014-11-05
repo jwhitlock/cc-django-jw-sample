@@ -70,7 +70,9 @@ for local development.
 
     $ mkvirtualenv cc-django-jw-sample
     $ cd cc-django-jw-sample/
-    $ python setup.py develop
+    $ pip install -r requirements.txt
+    $ ./manage.py syncdb
+    $ export DEBUG=1
 
 4. Create a branch for local development::
 
@@ -111,4 +113,12 @@ Tips
 
 To run a subset of tests::
 
-    $ python -m unittest tests.test_cc-django-jw-sample
+    $ ./manage.py test sample/tests/test_views.py
+
+To mark failed tests::
+
+    $ ./manage.py test --failed
+
+To re-run only the failed tests:
+
+    $ ./manage.py test --failed
