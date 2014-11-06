@@ -19,7 +19,7 @@ Sample Project
     :alt: The PyPI package
     :target: http://badge.fury.io/py/cc-django-jw-sample
 
-.. image:: https://pypip.in/d/cc-django-jw-sample/badge.png
+.. image:: https://pypip.in/download/cc-django-jw-sample/badge.png
     :height: 22px
     :alt: PyPI download statistics
     :target: https://pypi.python.org/pypi/cc-django-jw-sample
