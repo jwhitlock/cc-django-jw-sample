@@ -1,7 +1,7 @@
-========
+=====
 Usage
-========
+=====
 
-To use Sample Project in a project::
+To use cc-django-jw-sample in a project::
 
     import sample

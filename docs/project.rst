@@ -16,7 +16,7 @@ a process like this:
     app_name (default is "boilerplate")? sample
     site_name (default is "bpsite")? sample_site
     project_short_description (default is "Python Boilerplate contains all the boilerplate you need to create a Python package.")? Sample Project created from cookiecutter-django-jw
-    release_date (default is "2015-01-11")? 2014-11-05
+    release_date (default is "2015-01-11")? 2014-11-06
     year (default is "2014")? 2014
     version (default is "0.1.0")? 0.1.0
     $ cd cc-django-jw-sample

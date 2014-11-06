@@ -36,7 +36,7 @@ is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-Sample Project could always use more documentation, whether as
+cc-django-jw-sample could always use more documentation, whether as
 part of the official Sample Project docs, in docstrings, or
 even on the web in blog posts, articles, and such.
 
@@ -56,7 +56,7 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `cc-django-jw-sample`
+Ready to contribute? Here's how to set up cc-django-jw-sample
 for local development.
 
 1. Fork the `cc-django-jw-sample` repo on GitHub.
@@ -119,6 +119,6 @@ To mark failed tests::
 
     $ ./manage.py test --failed
 
-To re-run only the failed tests:
+To re-run only the failed tests::
 
     $ ./manage.py test --failed
