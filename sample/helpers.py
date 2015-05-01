@@ -8,3 +8,4 @@ from django.contrib.staticfiles.templatetags.staticfiles import static
 import jingo
 
 jingo.register.function(static)
+

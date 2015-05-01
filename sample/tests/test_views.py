@@ -15,3 +15,4 @@ class TestHome(TestCase):
             'Welcome to Sample Project'
             '</h1>')
         self.assertContains(response, expected_html, html=True)
+

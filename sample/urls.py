@@ -13,3 +13,4 @@ urlpatterns = patterns(
         template_name='sample/home.jinja2'),
         name='home'),
 )
+
