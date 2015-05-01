@@ -122,3 +122,4 @@ To mark failed tests::
 To re-run only the failed tests::
 
     $ ./manage.py test --failed
+
