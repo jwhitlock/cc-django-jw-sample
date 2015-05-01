@@ -9,7 +9,9 @@ try:
 except ImportError:
     from distutils.core import setup
 
+
 def get_long_description(title):
+    """Create the long_description from other files."""
     readme = open('README.rst').read()
     history = open('HISTORY.rst').read()
 
@@ -44,7 +46,7 @@ test_requirements = [
 setup(
     name='cc-django-jw-sample',
     version=version,
-    description='Sample Project created from cookiecutter-django-jw',
+    description='Sample Project created from cookiecutter-django-jw',  # flake8: noqa
     long_description=get_long_description('Sample Project created from cookiecutter-django-jw'),
     author='John Whitlock',
     author_email='john@factorialfive.com',

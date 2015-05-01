@@ -155,4 +155,3 @@ if DEBUG:
     else:
         assert debug_toolbar
         INSTALLED_APPS.append('debug_toolbar')
-
