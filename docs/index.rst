@@ -3,7 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+==================================================
+Sample Project created from cookiecutter-django-jw
+==================================================
+
 .. include:: ../README.rst
+    :start-after: .. Omit badges from docs
 
 Contents
 ========

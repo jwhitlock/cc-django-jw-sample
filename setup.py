@@ -9,9 +9,26 @@ try:
 except ImportError:
     from distutils.core import setup
 
+def get_long_description(title):
+    readme = open('README.rst').read()
+    history = open('HISTORY.rst').read()
 
-readme = open('README.rst').read()
-history = open('HISTORY.rst').read().replace('.. :changelog:', '')
+    body_tag = ".. Omit badges from docs"
+    readme_body_start = readme.index(body_tag)
+    assert readme_body_start
+    readme_body = readme[readme_body_start + len(body_tag):]
+
+    history_body = history.replace('.. :changelog:', '')
+    bars = '=' * len(title)
+    long_description = """
+%(bars)s
+%(title)s
+%(bars)s
+%(readme_body)s
+
+%(history_body)s
+""" % locals()
+    return long_description
 
 requirements = [
     'Django>=1.6',
@@ -28,7 +45,7 @@ setup(
     name='cc-django-jw-sample',
     version=version,
     description='Sample Project created from cookiecutter-django-jw',
-    long_description=readme + '\n\n' + history,
+    long_description=get_long_description('Sample Project created from cookiecutter-django-jw'),
     author='John Whitlock',
     author_email='john@factorialfive.com',
     url='https://github.com/jwhitlock/cc-django-jw-sample',

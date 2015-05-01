@@ -2,8 +2,6 @@
 Sample Project
 ==============
 
-.. This causes warnings from Sphinx due to external images, but the GitHub parser ignores raw HTML
-
 .. image:: https://travis-ci.org/jwhitlock/cc-django-jw-sample.png?branch=master
     :height: 22px
     :alt: The status of Travis continuous integration tests
@@ -28,6 +26,8 @@ Sample Project
     :height: 35px
     :alt: Deploy to Heroku
     :target: https://heroku.com/deploy?template=https://github.com/jwhitlock/cc-django-jw-sample
+
+.. Omit badges from docs
 
 Sample Project created from cookiecutter-django-jw
 
