@@ -12,6 +12,11 @@ Sample Project
     :alt: The code coverage
     :target: https://coveralls.io/r/jwhitlock/cc-django-jw-sample?branch=master
 
+.. image:: https://requires.io/github/jwhitlock/cc-django-jw-sample/requirements.svg?branch=master
+    :height: 22px
+     :target: https://requires.io/github/jwhitlock/cc-django-jw-sample/requirements/?branch=master
+     :alt: Requirements Status
+
 .. image:: https://badge.fury.io/py/cc-django-jw-sample.png
     :height: 22px
     :alt: The PyPI package
