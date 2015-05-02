@@ -1,4 +1,4 @@
-.PHONY: clean-pyc clean-build clean-test clean-pyc clean docs
+.PHONY: clean clean-build clean-pyc clean-test qa lint coverage jslint qa-all install-jslint test test-all coverage-console docs release sdist
 
 help:
 	@echo "clean - remove all artifacts"
@@ -43,7 +43,7 @@ lint:
 jslint:
 	if type jslint >/dev/null 2>&1 ; then jslint sample/static/js/*; else echo "jslint not installed. To install node and jshint, use 'make install_jslint"; fi
 
-install_jslint:
+install-jslint:
 	if [ -z "$$VIRTUAL_ENV" ]; then echo "Run inside a virtualenv"; exit 1; fi
 	mkdir -p .node_src_tmp
 	cd .node_src_tmp && curl http://nodejs.org/dist/node-latest.tar.gz | tar xvz && cd node-v* && ./configure --prefix=$$VIRTUAL_ENV && make install
@@ -56,10 +56,12 @@ test:
 test-all:
 	tox --skip-missing-interpreters
 
-coverage:
+coverage-console:
 	coverage erase
 	coverage run --source sample setup.py test
 	coverage report -m
+
+coverage: coverage-console
 	coverage html
 	open htmlcov/index.html
 
