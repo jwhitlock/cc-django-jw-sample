@@ -14,11 +14,12 @@ Sample Project
      :target: https://requires.io/github/jwhitlock/cc-django-jw-sample/requirements/?branch=master
      :alt: Requirements Status
 
-.. image:: https://badge.fury.io/py/cc-django-jw-sample.png
+.. Enable after deployment
+.. .. image:: https://badge.fury.io/py/cc-django-jw-sample.png
     :alt: The PyPI package
     :target: http://badge.fury.io/py/cc-django-jw-sample
 
-.. image:: https://pypip.in/download/cc-django-jw-sample/badge.png
+.. .. image:: https://pypip.in/download/cc-django-jw-sample/badge.png
     :alt: PyPI download statistics
     :target: https://pypi.python.org/pypi/cc-django-jw-sample
 
