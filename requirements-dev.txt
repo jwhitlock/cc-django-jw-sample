@@ -16,10 +16,6 @@ flake8-docstrings==0.2.1
 # Code coverage
 coverage==3.7.1
 
-# Better test runner
-nose==1.3.6
-django-nose==1.4
-
 # Documentation
 Pygments==2.0.2
 Sphinx==1.3.1
