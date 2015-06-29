@@ -13,14 +13,14 @@ overriden by environment variables.
 One way to set environment variables for local development in a virtualenv:
 
 $ vi $VIRTUAL_ENV/bin/postactivate
-export DJANGO_DEBUG=1
+export DEBUG=1
 $ vi $VIRTUAL_ENV/bin/predeactivate
-unset DJANGO_DEBUG
+unset DEBUG
 $ source $VIRTUAL_ENV/bin/postactivate
 
 To set environment variables in heroku environment
 $ heroku config
-$ heroku config:set DJANGO_DEBUG=1
+$ heroku config:set DEBUG=1
 
 Environment variables:
 ALLOWED_HOSTS - comma-separated list of allowed hosts
@@ -59,7 +59,6 @@ SECRET_KEY = environ.get(
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = environ.get("DEBUG", '0') in (1, '1')
-TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = environ.get('ALLOWED_HOSTS', '').split(',')
 if environ.get('SECURE_PROXY_SSL_HEADER'):
@@ -131,6 +130,21 @@ TEMPLATES = [
             'environment': 'sample_site.jinja2.environment',
         },
     },
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
+                'django.contrib.messages.context_processors.messages',
+            ]
+        }
+    },
 ]
 
 # Static files (CSS, JavaScript, Images)
@@ -145,14 +159,6 @@ STATIC_URL = '/static/'
 #
 # 3rd Party Libraries
 #
-
-# Jingo / Jinja2 templates
-TEMPLATE_LOADERS = (
-    'jingo.Loader',
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-)
-JINGO_INCLUDE_PATTERN = r'\.jinja2'
 
 # Django nose
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
