@@ -2,7 +2,7 @@
 # Requirements for running cc-django-jw-sample
 #
 
-Django==1.7.8  # rq.filter: >=1.7,<1.8
+Django==1.8.2
 
 # Load database config from environment
 dj-database-url==0.3.0
@@ -10,18 +10,17 @@ dj-database-url==0.3.0
 # Better templates
 MarkupSafe==0.23
 Jinja2==2.7.3
-jingo==0.7
 
 # Better test runner
-nose==1.3.6
+nose==1.3.7
 django-nose==1.4
 
 # Django extensions
 six==1.9.0
-django-extensions==1.5.2
+django-extensions==1.5.5
 
 # Production quality serving of static files
-static3==0.5.1
+static3==0.6.1
 dj-static==0.0.6
 
 # ./manage.py runserver_plus for better tracebacks
@@ -29,7 +28,7 @@ Werkzeug==0.10.4
 
 # Django debug toolbar
 sqlparse==0.1.15
-django-debug-toolbar==1.3.0
+django-debug-toolbar==1.3.2
 
 #
 # Requirements for Heroku
@@ -39,4 +38,4 @@ django-debug-toolbar==1.3.0
 gunicorn==19.3.0
 
 # PostgreSQL driver
-psycopg2==2.6
+psycopg2==2.6.1

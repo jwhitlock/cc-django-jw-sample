@@ -70,7 +70,7 @@ for local development.
 
     $ mkvirtualenv cc-django-jw-sample
     $ cd cc-django-jw-sample/
-    $ pip install -r requirements.txt
+    $ pip install -r requirements.txt -r requirements-dev.txt
     $ ./manage.py syncdb
     $ export DEBUG=1
 
