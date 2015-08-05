@@ -1,7 +1,8 @@
 # Config file for automatic testing at travis-ci.org
 
+sudo: false
 language: python
-install: pip install tox
+install: pip install tox coveralls
 script: tox
 env:
   - TOXENV=py27-django18
@@ -9,4 +10,5 @@ env:
   - TOXENV=docs
   - TOXENV=flake8
   - TOXENV=coverage
-
+after_success:
+  - bash -c "if [[ \"$TOXENV\" == coverage ]]; then coveralls; fi"

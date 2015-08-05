@@ -14,6 +14,7 @@ help:
 	@echo "sdist - package"
 	@echo "test - run tests quickly with the default Python"
 	@echo "test-all - run tests on every Python version with tox"
+	@echo "test-release - upload a release to the PyPI test server
 
 clean: clean-build clean-pyc clean-test
 
@@ -71,8 +72,13 @@ docs:
 	open docs/_build/html/index.html
 
 release: clean
-	python setup.py sdist upload
-	python setup.py bdist_wheel upload
+	python setup.py sdist bdist_wheel upload
+	python -m webbrowser -n https://testpypi.python.org/pypi/cc-django-jw-sample
+
+test-release:
+	python setup.py register -r https://testpypi.python.org/pypi
+	python setup.py sdist bdist_wheel upload -r https://testpypi.python.org/pypi
+	python -m webbrowser -n https://testpypi.python.org/pypi/cc-django-jw-sample
 
 sdist: clean
 	python setup.py sdist
